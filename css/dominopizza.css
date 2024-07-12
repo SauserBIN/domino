@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* common */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.75px;
+}
+
+a {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.common_img {
+    background-image: url(../img/sp_common.png);
+}
+
+/* header start */
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: baseline;
+    /* baseline은 영문폰트 기준으로 가운데 기준이라는뜻인데 한글쓸땐 end보다 조금더
+    높다는 정도로만 생각하면된다. */
+}
+
+.header_wrap>h1>a {
+    display: block;
+    width: 155px;
+    height: 35px;
+}
+
+.location {
+    padding-right: 50px;
+    border-bottom: 1px solid black;
+}
+
+.arrow {
+    display: inline-block;
+    /* 이미지에 인라인블럭을 준 이유=그냥 블럭을 줄 경우 줄이 바뀌기 때문 */
+    width: 20px;
+    height: 18px;
+    background-position: -163px 0;
+}
+
+
+.header_wrap>ul {
+    display: flex;
+    gap: 20px;
+}
+
+.header_wrap>ul a {
+    font-size: 14px;
+    color: #111;
+}
+
+.lang {
+    display: block;
+    width: 60px;
+    height: 27px;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 25px;
+    /* 보더값만큼 height값 제외하고 */
+    border-radius: 14px;
+    /* 보더 겉모양을 살짝 둥글게 만들어줌. 값은 높이값의 반정도로 줘야한다. */
+}
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 15px 0;
+    background-color: #fff;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav>ul>li {
+    padding-right: 120px;
+}
+
+nav>ul>li.nav_more {
+    width: 50px;
+    text-align: right;
+    padding-right: 0;
+    cursor: pointer;
+    position:relative;
+}
+.nav_more>span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-color: transparent #000 #000 transparent;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-left: 7px;
+    margin-right: 4px;
+    vertical-align: 4px;
+    transition: 0.3s;
+    position: absolute;
+    top: 10px;
+    left: 55px;
+}
+
+.nav_more>span.spin_up{
+    transform: rotate(225deg);
+}
+
+nav>ul>li>a {
+    font-size: 18px;
+    color: #111;
+    position: relative;
+}
+
+nav>ul>li>a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #111;
+    transition: 0.3s;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* ::after= 가상선택자 중요하지않은애들한테 사용 html등*
+사용시에는 반드시 content가 들어가야함.
+content:''; 단. 애프터로 준 애들은 자바스크립트로 잡을수가 없으므로
+주면 안된다./ */
+
+nav>ul>li>a:hover::after {
+    width: 100%;
+}
+
+.snb-wrap{
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9999999;
+    border-top: 1px solid #ddd;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.inner_box{
+    display: flex;
+}
+.mnu_wrap{
+    display: flex;
+    width: 794px;
+    padding-right: 100px;
+    justify-content: space-around;
+
+}
+.mnu{
+    width: 178px;
+}
+.snb-wrap li>a{
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    color: #555;
+}
+.snb-wrap a{
+    display: block;
+    padding: 10px 0;
+    font-size: 17px;
+    color: #111;
+}
+
+
+.notice-box{
+    display:inline-block;
+    width: 270px;
+    height: 156px;
+    padding: 22px 0 23px 70px;
+    margin-top: 10px;
+    border-left: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.notice-box li>a{
+    color: #888;
+}
+.hi100{
+    height: 250px;
+}
+
+/* main start */
+main{
+    padding-bottom: 80px;
+}
+
+
+.arrow_wrap {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.arrow_wrap>.ulp {
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    position: relative;
+}
+.arrow_wrap>.ulp>.swiper-button-next{
+    width: 50px;
+    height: 50px;
+    color: black;
+    position: absolute;
+    right: 85px;
+}
+
+.arrow_wrap>.ulp>.swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    color: black;
+    position: absolute;
+    left: 85px;
+}
+.arrow_wrap>.ulp>.swiper-pagination{
+    position: absolute;
+    top:170px;
+    height: 46px;
+    left: 50%;
+    width: 110px;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 5, 60%);
+    border-radius: 30px;
+    padding: 10px;
+    padding-right: 35px;
+    color: #fff;
+}
+.swiper-button-next:after{
+    text-indent:-10000px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-style: solid;
+    border-color: transparent #000 #000 transparent;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.swiper-button-prev:after{
+    text-indent:-10000px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-style: solid;
+    border-color: transparent #000 #000 transparent;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+.stop-button{
+    position: absolute;
+    width: 10px;
+    left: 50%;
+    top: 185px;
+    height: 15px;
+    margin-left: 14px;
+    background: url(../img/sp_common.png) -183px -46px no-repeat;
+    font-size: 0;
+    vertical-align: 14px;
+    z-index: 999;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+.play{
+    background: url(../img/sp_common.png) -164px -46px no-repeat;
+}
+.bnr_sw_top{
+    width: 1100px;
+}
+
+.posi_r{
+    position: relative;
+}
+.posi_r>.swiper-button-next{
+    width: 50px;
+    height: 50px;
+    color: black;
+    position: absolute;
+    right: -50px;
+    top: 0;
+}
+
+.posi_r>.swiper-button-prev{
+    width: 50px;
+    height: 50px;
+    color: black;
+    position: absolute;
+    left: -1200px;
+    top: 0;
+}
+
+
+/* 꺽쇠를 보더로 만드는 방법 */
+
+.page_wrap{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px 20px;
+    background-color: rgba(0, 0, 5, 60%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+}
+.play{
+    width: 12px; height: 15px;
+    background-position: -163px -46px;
+}
+
+.order_wrap{
+    display: flex;
+    padding:50px 0 80px 0;
+}
+.order_wrap>article{
+    padding-left:70px;
+    flex: 1;
+}
+
+.delivery>div{
+    width: 52px; height: 38px;
+    background-position: -195px -275px;
+}
+
+.takeout>div{
+    width: 40px; height: 39px;
+    background-position: -262px -275px;
+}
+.quick>div{
+    width: 26px; height: 42px;
+}
+
+.order_wrap h2{
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.delivery>h2{
+    color: #ff143f;
+}
+.delivery span{
+    display: inline-block;
+    width: 30px; height: 30px;
+    background-color: #ff143f;
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+}
+.delivery span::after{
+    content:'';
+    display: block;
+    width: 9px; height: 9px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    position: absolute;
+    top:10px; left:7px;
+}
+
+.takeout>h2{
+    color: blue;
+}
+.takeout span{
+    display: inline-block;
+    width: 30px; height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+}
+.takeout span::after{
+    content: '';
+    display: block;
+    width: 9px; height: 9px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 10px; left:7px;
+}
+.order_wrap{
+    color: #888;
+}
+
+.order_wrap span{
+    display: inline-block;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+}
+.order_wrap span::after{
+    content: '';
+    display: block;
+    width: 9px; height: 9px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 10px; left:7px;
+}
+.mania_wrap{
+    padding: 110px 0;
+    background: #f6f6f6;
+}
+.mania{
+    display: flex;
+    justify-content: space-between;
+}
+.mania h2{
+    font-size: 28px;
+    color: #111;
+    font-weight: 500;
+}
+.mania h2>span{
+    display: block;
+    color: #1382ff;
+    font-weight: 700px;
+}
+
+.login{
+    width: 103px; height: 43px;
+    background-color: #111;
+    text-align: center;
+    color: #fff;
+    border-radius: 21px;
+    line-height: 43px;
+    margin-top: 30px;
+}
+
+.mania>ul{
+    display: flex;
+    gap: 5px;
+    padding:0 54px;
+}
+.bnr_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    width: 1100px
+}
+.btn_sw_wrap{
+    width: 1200px;
+}
+
+.bnr_wrap>.swiper-button-prev{
+    left: 85px;
+}
+.bnr_wrap>.swiper-button-next{
+    right: 85px;
+}
+
+
+/* 여기서부터 footer */
+
+footer{
+    border-top: 1px solid #ddd;
+    }
+
+.f_top{
+    padding: 52px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_order{
+    display: flex;
+    align-items: baseline;
+}
+.footer_order>h1>a{
+    display: block;
+    width: 123px; height: 26px;
+    background-position: 0 -47px;
+}
+.tell{
+    font-size: 30px;
+    padding-left: 13px;
+    font-weight: 600;
+}
+.strong{
+    font-weight: 700;
+}
+.f_top>div>ul{
+    display: flex;
+    gap: 15px;
+    padding: 10px 0 20px;
+}
+.footer_info{
+    font-size: 12px;
+    line-height: 1.75;
+    color: #888;
+    font-size: 12px;
+}
+.langu{
+    width: 174px;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+.langu::after{
+    content:'';
+    display: block;
+    width: 7px; height: 7px;
+    border-bottom: 1px solid #111;
+    border-right: 1px solid #111;
+    transform: rotate(45deg);    
+    position: absolute;
+    bottom: 5px; right: 0;
+}
+.down{
+    display: flex;
+    padding: 10px 0;
+}
+.down>ul{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.down p{
+    font-size: 13px;
+    padding-right: 15px;
+}
+.apple{
+    display: block;
+    width: 20px; height: 26px;
+    background-position: -446px 0;
+}
+.android{
+    display: block;
+    width: 22px; height: 23px;
+    background-position: -477px 0;
+}
+.footer_cont>ul{
+    display: flex;
+}
+.footer_cont>ul a{
+    display:block;
+}
+
+.footer_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bl{
+    width: 13px; height: 20px;
+    background-position: -509px 0;
+}
+.in{
+    width: 21px; height: 21px;
+    background-position: -532px 0;
+}
+.fb{
+    width: 11px; height: 22px;
+    background-position: -563px 0;
+}
+.yt{
+    width: 25px; height: 19px;
+    background-position: -584px 0;
+}
+.tw{
+    width: 23px; height: 19px;
+    background-position: -619px 0;
+}
+.f_bot{
+    padding: 30px;
+}
+.f_bot>ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+.f_bot > ul > li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.f_bot>ul p{
+    display: inline-block;
+    font-size: 11px;
+    padding-left: 7px;
+    line-height: 16px;
+    color: #888;
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+.f_bot>ul>li>img{
+    display: inline-block;
+}
+.mySwiper .swiper-slide{
+    display: flex;
+    justify-content: space-around;
+}
+.swiper-btn-prev{
+    width: 50px;
+    height: 50px;
+    color: black;
+    position: absolute;
+    right: 1130px;
+    cursor: pointer;
+}
+.swiper-btn-next{
+    width: 50px;
+    height: 50px;
+    color: black;
+    position: absolute;
+    right: -30px;
+    cursor: pointer;
+}
+
+.swiper-btn-prev::after, .swiper-btn-next::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-btn-prev::after{
+    text-indent: -10000px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-style: solid;
+    border-color: transparent #000 #000 transparent;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+.swiper-btn-next::after{
+    text-indent: -10000px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-style: solid;
+    border-color: transparent #000 #000 transparent;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}

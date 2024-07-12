@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/dominopizza.css">
+    <link rel="stylesheet" href="css/dominoSub.css">
+</head>
+
+<body>
+    <header class="w100">
+        <div class="header_wrap w1200">
+            <h1><a class="common_img" href=""></a></h1>
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a class="lang" herf="#">KOR</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav class="w100">
+        <ul class="w1200">
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">e-쿠폰</a></li>
+            <li><a href="#">상품권 선물</a></li>
+            <li><a href="#">이벤트·제휴</a></li>
+            <li><a href="#">매장검색</a></li>
+            <li><a href="#">가맹점 모집</a></li>
+            <li class="nav_more" onclick="opener()">더보기 <span id="spin"></span></li>
+        </ul>
+        <div class="w100 snb-wrap">
+            <div class="w1200 inner_box">
+                <div class="mnu_wrap">
+                    <div class="mnu">
+                        <a href="">도미노 서비스</a>
+                        <ul>
+                            <li>
+                                <a href="">매니아 혜택</a>
+                            </li>
+                            <li>
+                                <a href="">도미노 모멘트</a>
+                            </li>
+                            <li>
+                                <a href="">퀵오더</a>
+                            </li>
+                            <li><a href="">단체주문 서비스</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mnu">
+                        <a href="">고객센터</a>
+                        <ul>
+                            <li>
+                                <a href="">자주하는 질문</a>
+                            </li>
+                            <li>
+                                <a href="">문의/칭찬하기</a>
+                            </li>
+                            <li>
+                                <a href="">문의 내역/답변</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mnu">
+                        <a href="">회사소개</a>
+                        <ul>
+                            <li>
+                                <a href="">한국도미노피자</a>
+                            </li>
+                            <li>
+                                <a href="">광고갤러리</a>
+                            </li>
+                            <li>
+                                <a href="">사회공헌활동</a>
+                            </li>
+                            <li>
+                                <a href="">가맹점 모집</a>
+                            </li>
+                            <li>
+                                <a href="">인재채용</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="notice-box">
+                    <div>
+                        <a href="">공지사항</a>
+                        <ul>
+                            <li><a href="">-도미노뉴스</a></li>
+                            <li><a href="">-보도자료</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="w100 custom_pd">
+        <section class="w1200 acc_sec">
+            <div class="acc_top flex">
+                <h2>고객센터</h2>
+                <ul class="acc_side flex">
+                    <li><a href="">홈</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a>자주하는 질문</a></li>
+                </ul>
+            </div>
+            <article>
+                <div class="acc_nav_wrap">
+                    <ul class="flex">
+                        <li><span>자주하는 질문</span></li>
+                        <li><span>문의/칭찬하기</span></li>
+                        <li><span>문의 내역/답변</span></li>
+                    </ul>
+                </div>
+
+                <div class="tap_contents">
+                    <form>
+                        <div class="tap">
+                            <div class="acc_search_top">
+                                <a href="">
+                                    <p>
+                                        도미노피자에 대한 궁금증을 바로 확인하실 수 있습니다.
+                                    </p>
+                                </a>
+                                <p class="txt_faq">
+                                    <a href="">도미노피자 고객만족센터 </a>
+                                    <a href="">080-860-3082</a>
+                                </p>
+                                <div class="form_grup flex">
+                                    <div class="form_item">
+                                        <div class="select_type">
+                                            <select name="" id="">
+                                                <option value="title">제목</option>
+                                                <option value="contents">내용</option>
+                                                <option value="all">제목+내용</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form_item">
+                                        <input type="text" id="ctgText" name="ctgText" placeholder="">
+                                    </div>
+                                    <div class="form_item">
+                                        <button type="submit" class="btn_search" onclick="ctgSearch();">검색</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tap_type">
+                                <ul>
+                                    <li><span class="lst_fap_start">피자 주문하기</span></li>
+                                    <li><span class="lst_fap_start">주문확인</span></li>
+                                    <li><span class="lst_fap_start">포장 주문</span></li>
+                                    <li><span class="lst_fap_start">할인/쿠폰</span></li>
+                                    <li><span class="lst_fap_start">상품권/도미노콘/선물</span></li>
+                                    <li><span class="lst_fap_start">도미노페이/퀵오더</span></li>
+                                    <li><span class="lst_fap_start">회원/로그인</span></li>
+                                    <li><span class="lst_fap_start">기타</span></li>
+                                </ul>
+                            </div>
+                            <div class="lst_faq_wrap">
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 적용가능한 할인이 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    Apple Pay 결제수단 이용 시, 카드사 제휴할인 이용이 불가합니다.
+                                                    <br>
+                                                    애플페이의 서비스 정책 상 할부와 카드사 포인트 복합결제는 불가한 것으로 안내드립니다.
+                                                    <br>
+                                                    카드사 포인트 복합결제는 결제수단을 변경해주세요.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 지원기기인데 온라인 결제가 안돼요.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    iOS16 이상이라면 Safari, Chrome, NEVER APP에서 주문이 가능합니다.
+                                                    <br>
+                                                    iOS16 미만 버전이라면, Safari에서만 가능하며, 최신 버전의 OS로 업데이트해 주세요. <br>
+                                                    모든 기기는 최신 버전의 OS 사용을 권장합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 오프라인 온라인 결제가능하나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    온라인 선결제시 가능 합니다.
+                                                    <br>
+                                                    오프라인 매장결제 및 전화결제시 이용이 불가합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 로 할부 결제가 가능한가요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    Apple Pay는 할부서비스를 지원하지 않습니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">결제하기 화면에 Apple Pay 버튼이 보이지 않아, Apple Pay 로 결제할 수 없습니다.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    모든 기기는 최신 버전의 OS 사용을 권장합니다.
+                                                    <br>
+                                                    <br>
+                                                    버전에 따른 Apple Pay 이용가능한 브라우저
+                                                    <br>
+                                                    · iPhone, iPad
+                                                    <br>
+                                                    iOS 16.0 이상 : Safari 포함 모든 브라우저에서 Apple Pay 이용가능
+                                                    <br>
+                                                    iOS 16.0 미만 : Safari 브라우저에서만 가능
+                                                    <br>
+                                                    · Mac : 버전에 상관없이 Safari 브라우저에서만 가능
+                                                    <br>
+                                                    <br>
+                                                    카드사 제휴할인 적용 시, Apple Pay 결제가 불가합니다.
+                                                    <br>
+                                                    카드사 포인트 복합결제는 결제수단을 변경해주세요.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 결제방법이 궁금해요.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">도미노피자는 홈페이지를 통한 온라인 선결제에서 사용가능합니다.
+                                                    <br>
+                                                    (전화 주문 및 매장에서 주문 시에는 사용 불가)
+                                                    <br>
+                                                    <br>
+                                                    기기 별 Apple Pay 주문방법
+                                                    <br>
+                                                    <br>
+                                                    iPhone, iPad
+                                                    <br>
+                                                    1) 온라인 도미노홈페이지 또는 APP으로 접속해주세요.
+                                                    <br>
+                                                    2) 미리결제 수단 중에서 Apple Pay 를 선택해주세요.
+                                                    <br>
+                                                    3) 주문정보를 확인 후, 'Apple Pay로 결제' 버튼을 눌러서, 주문을 완료해주세요.
+                                                    <br>
+                                                    4) 주문완료 후, 주문완료 내역과 영수증은 나의 정보 > 주문내역 메뉴에서 조회하실 수 있습니다.
+                                                    <br>
+                                                    <br>
+                                                    Mac
+                                                    <br>
+                                                    1) 온라인 도미노홈페이지 Safari 브라우저를 통해 도미노홈페이지로 접속해주세요.
+                                                    <br>
+                                                    2) 미리결제 수단 중에서 Apple Pay를 선택해주세요.
+                                                    <br>
+                                                    3) 주문정보를 확인 후, 'Apple Pay로 결제' 버튼을 눌러서, 주문을 완료해주세요.
+                                                    <br>
+                                                    4) 주문완료 후, 주문완료 내역과 영수증은 나의 정보 > 주문내역 메뉴에서 조회하실 수 있습니다.
+                                                    <br>
+                                                    <br>
+                                                    Apple Watch는 온라인결제를 지원하지 않습니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">금액상품권은 어떻게 사용하나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">온라인 주문 시 이용 가능합니다. (오프라인 주문 불가)
+                                                    <br>
+                                                    <br>
+                                                    나의정보 > 금액상품권 메뉴에서 소지하고 계신 상품권 번호를 등록 후
+                                                    <br>
+                                                    원하시는 메뉴를 담고 결제하기 화면에서 등록한 금액상품권을 선택하시면 사용 가능합니다.
+                                                    <br>
+                                                    <br>
+                                                    ※여타 할인과 중복 적용 가능하나, 카드사 제휴 할인과는 동시 사용 불가합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">배달/포장 주문 시 보이는 시간은 무엇인가요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    주문 시각을 기준으로 매장별 배달/포장 주문 시 소요되는 시간을 의미합니다. 기본적으로 배달 주문은 평균 30분, 포장
+                                                    주문은 15분이 소요됩니다.
+                                                    <br>
+                                                    단, 매장 상황(배달사원 부족, 주문 폭주 등)에 따라 배달/포장 소요시간이 변경될 수 있습니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">예약 주문은 어디서 할 수 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    예약 주문은 장바구니에서 설정이 가능합니다. 예약을 변경하거나 취소하는 경우 장바구니와 결제하기에서 가능합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">예약주문만 가능한 경우는 왜 그런가요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    매장이 영업 종료되었거나 또는 영업 시작 전인 경우 예약 주문만 가능합니다. 또한, 피자 5판 이상 주문 시에도 예약
+                                                    주문만 이용 가능합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lst_faq_wrap">
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">현금영수증 발급은 어떻게 할 수 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    E쿠폰, 도미노콘, M12 모바일 기프트권을 사용하거나 도미노페이 계좌이체로 결제한 온라인 주문은 현금영수증이 자동
+                                                    발급됩니다.
+                                                    <br>
+                                                    단, 지류상품권 사용 또는 현장현금결제 시에는 결제가 '완료'된 후 매장에서 수동으로 현금영수증 발급 처리해드립니다.
+                                                    <br>
+                                                    <br>
+                                                    ■ 현금영수증 발급받기
+                                                    <br>
+                                                    - 주문시점: [주문/결제 페이지 > 현금영수증] 란에서 신청하여 발급 가능
+                                                    <br>
+                                                    <br>
+                                                    ■ 현금영수증 확인하기
+                                                    <br>
+                                                    - 경로 : [나의정보 > 주문내역 > 주문내역상세 > 현금영수증 조회 클릭]
+                                                    <br>
+                                                    <br>
+                                                    ※ 주문전 [나의정보 > 정보수정 > 현금영수증 관리]에서 '현금영수증 신청 정보' 입력이 가능합니다.
+                                                    <br>
+                                                    <br>
+                                                    ■ 기타사항
+                                                    <br>
+                                                    - 현금영수증 발행 대상이나 미신청한 경우에는 자진발급하여 발행처리해 드립니다.
+                                                    <br>
+                                                    - 자진발급분의 경우 현금영수증 식별번호가 010-0000-1234로 기재됩니다.
+                                                    <br>
+                                                    - 발행방법이 자진발급인 경우 국세청 사이트에서 자진발급분 사용자 등록을 하셔야만 소득공제 등 혜택을 받으실 수 있습니다.
+                                                    <br>
+                                                    - 현금영수증 발행내역은 국세청 사이트(http://hometax.go.kr)에서 조회가 가능합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">주문상태는 어떻게 확인할 수 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    나의정보>주문내역에서 확인 가능합니다.
+                                                    <br>
+                                                    주문이 완료된 후 매장에서 주문을 접수하고 고객님께서 피자를 받으실 때까지의 단계를 표시 하고 있습니다.
+                                                    <br>
+                                                    <br>
+                                                    접수완료 : 매장으로 주문이 접수되었습니다.
+                                                    <br>
+                                                    요리중 : 매장에서 피자를 만들고 있습니다.
+                                                    <br>
+                                                    배달중 : 배달주문의 경우 배달원이 피자를 배달중인 상태입니다.(GPS Tracker를 통해 실시간 위치 확인이
+                                                    가능합니다.
+                                                    <br>
+                                                    수령가능 : 포장주문의 경우 피자 포장이 완료되어 수령이 가능한 상태입니다.
+                                                    <br>
+                                                    배달완료/수령완료 : 고객님께 피자가 전달된 상태 입니다.
+                                                    <br>
+                                                    <br>
+                                                    주문취소 : 매장을 통해 주문을 취소하신 경우를 나타냅니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">결제 승인 및 취소 현황은 어떻게 확인하나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    미리결제로 진행하신 주문의 결제 승인 및 취소 현황은 각 카드사 혹은 간편결제 사이트에서 확인 가능합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">결제내역 영수증을 출력하고 싶습니다.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    도미노페이나 신용카드, Apple Pay 결제의 경우는 주문내역에서 영수증 출력이 가능하나,
+                                                    <br>
+                                                    다른 결제수단(네이버페이, 카카오페이 등)은 해당 간편결제 사이트/앱에서 확인 가능합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">주문한 내역은 어디에서 확인할 수 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    주문한 내역은 나의정보>주문내역에서 확인 가능합니다.
+                                                    <br>
+                                                    최근 1년 이내 주문한 내역만 확인 가능합니다.
+                                                    <br>
+                                                    <br>
+                                                    매장(1577-3082) 또는 콜센터(1588-3082), 다른 계정으로 주문하신 내역은 확인이 불가능 합니다.
+                                                    <br>
+                                                    온라인 상으로 주문한 최초의 이력만 확인하실 수 있으며, 전화를 통해 변경하신 사항은 반영되지 않습니다.
+                                                    <br>
+                                                    <br>
+                                                    메뉴 변경이나 주문취소를 원하실 경우, 매장에 주문번호를 알려 주셔야 합니다. (온라인으로 주문취소는 불가합니다.)
+                                                    <br>
+                                                    <br>
+                                                    피자주문이력은 최근 3개월 내역까지만 삭제 가능하며, 주문이 취소되는 것은 아닙니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lst_faq_wrap">
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 적용가능한 할인이 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    Apple Pay 결제수단 이용 시, 카드사 제휴할인 이용이 불가합니다.
+                                                    <br>
+                                                    애플페이의 서비스 정책 상 할부와 카드사 포인트 복합결제는 불가한 것으로 안내드립니다.
+                                                    <br>
+                                                    카드사 포인트 복합결제는 결제수단을 변경해주세요.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 지원기기인데 온라인 결제가 안돼요.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    iOS16 이상이라면 Safari, Chrome, NEVER APP에서 주문이 가능합니다.
+                                                    <br>
+                                                    iOS16 미만 버전이라면, Safari에서만 가능하며, 최신 버전의 OS로 업데이트해 주세요. <br>
+                                                    모든 기기는 최신 버전의 OS 사용을 권장합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 오프라인 온라인 결제가능하나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    온라인 선결제시 가능 합니다.
+                                                    <br>
+                                                    오프라인 매장결제 및 전화결제시 이용이 불가합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lst_faq_wrap">
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 적용가능한 할인이 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    Apple Pay 결제수단 이용 시, 카드사 제휴할인 이용이 불가합니다.
+                                                    <br>
+                                                    애플페이의 서비스 정책 상 할부와 카드사 포인트 복합결제는 불가한 것으로 안내드립니다.
+                                                    <br>
+                                                    카드사 포인트 복합결제는 결제수단을 변경해주세요.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 지원기기인데 온라인 결제가 안돼요.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    iOS16 이상이라면 Safari, Chrome, NEVER APP에서 주문이 가능합니다.
+                                                    <br>
+                                                    iOS16 미만 버전이라면, Safari에서만 가능하며, 최신 버전의 OS로 업데이트해 주세요. <br>
+                                                    모든 기기는 최신 버전의 OS 사용을 권장합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 오프라인 온라인 결제가능하나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    온라인 선결제시 가능 합니다.
+                                                    <br>
+                                                    오프라인 매장결제 및 전화결제시 이용이 불가합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lst_faq_wrap">
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 적용가능한 할인이 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    Apple Pay 결제수단 이용 시, 카드사 제휴할인 이용이 불가합니다.
+                                                    <br>
+                                                    애플페이의 서비스 정책 상 할부와 카드사 포인트 복합결제는 불가한 것으로 안내드립니다.
+                                                    <br>
+                                                    카드사 포인트 복합결제는 결제수단을 변경해주세요.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 지원기기인데 온라인 결제가 안돼요.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    iOS16 이상이라면 Safari, Chrome, NEVER APP에서 주문이 가능합니다.
+                                                    <br>
+                                                    iOS16 미만 버전이라면, Safari에서만 가능하며, 최신 버전의 OS로 업데이트해 주세요. <br>
+                                                    모든 기기는 최신 버전의 OS 사용을 권장합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 오프라인 온라인 결제가능하나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    온라인 선결제시 가능 합니다.
+                                                    <br>
+                                                    오프라인 매장결제 및 전화결제시 이용이 불가합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lst_faq_wrap">
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 적용가능한 할인이 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    Apple Pay 결제수단 이용 시, 카드사 제휴할인 이용이 불가합니다.
+                                                    <br>
+                                                    애플페이의 서비스 정책 상 할부와 카드사 포인트 복합결제는 불가한 것으로 안내드립니다.
+                                                    <br>
+                                                    카드사 포인트 복합결제는 결제수단을 변경해주세요.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 지원기기인데 온라인 결제가 안돼요.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    iOS16 이상이라면 Safari, Chrome, NEVER APP에서 주문이 가능합니다.
+                                                    <br>
+                                                    iOS16 미만 버전이라면, Safari에서만 가능하며, 최신 버전의 OS로 업데이트해 주세요. <br>
+                                                    모든 기기는 최신 버전의 OS 사용을 권장합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 오프라인 온라인 결제가능하나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    온라인 선결제시 가능 합니다.
+                                                    <br>
+                                                    오프라인 매장결제 및 전화결제시 이용이 불가합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lst_faq_wrap">
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 적용가능한 할인이 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    Apple Pay 결제수단 이용 시, 카드사 제휴할인 이용이 불가합니다.
+                                                    <br>
+                                                    애플페이의 서비스 정책 상 할부와 카드사 포인트 복합결제는 불가한 것으로 안내드립니다.
+                                                    <br>
+                                                    카드사 포인트 복합결제는 결제수단을 변경해주세요.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 지원기기인데 온라인 결제가 안돼요.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    iOS16 이상이라면 Safari, Chrome, NEVER APP에서 주문이 가능합니다.
+                                                    <br>
+                                                    iOS16 미만 버전이라면, Safari에서만 가능하며, 최신 버전의 OS로 업데이트해 주세요. <br>
+                                                    모든 기기는 최신 버전의 OS 사용을 권장합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 오프라인 온라인 결제가능하나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    온라인 선결제시 가능 합니다.
+                                                    <br>
+                                                    오프라인 매장결제 및 전화결제시 이용이 불가합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lst_faq_wrap">
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 적용가능한 할인이 있나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    Apple Pay 결제수단 이용 시, 카드사 제휴할인 이용이 불가합니다.
+                                                    <br>
+                                                    애플페이의 서비스 정책 상 할부와 카드사 포인트 복합결제는 불가한 것으로 안내드립니다.
+                                                    <br>
+                                                    카드사 포인트 복합결제는 결제수단을 변경해주세요.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 지원기기인데 온라인 결제가 안돼요.</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    iOS16 이상이라면 Safari, Chrome, NEVER APP에서 주문이 가능합니다.
+                                                    <br>
+                                                    iOS16 미만 버전이라면, Safari에서만 가능하며, 최신 버전의 OS로 업데이트해 주세요. <br>
+                                                    모든 기기는 최신 버전의 OS 사용을 권장합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt class="qus">Apple Pay 오프라인 온라인 결제가능하나요?</dt>
+                                            <div class="asw_h">
+                                                <dd class="asw">
+                                                    온라인 선결제시 가능 합니다.
+                                                    <br>
+                                                    오프라인 매장결제 및 전화결제시 이용이 불가합니다.
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tap">
+                            <div class="acc_tap_contents">
+                                <div class="tap_con_top">
+                                    <p>도미노피자를 이용하시면서 느꼈던 불편한 점이나 건의사항, 제품에 대한 의견을 남겨주시면 성심껏 답변해드리겠습니다.</p>
+                                    <p>※주문 취소/변경과 같은 긴급한 요청은 매장으로 연락 부탁드립니다.</p>
+                                    <p class="tct_p">도미노피자 고객만족센터 080-860-3082</p>
+                                </div>
+                                <div class="privacy_agree">
+                                    <dl>
+                                        <dt>
+                                            개인정보 수집 및 이용동의
+                                        </dt>
+                                        <dd>
+                                            <div class="agree_wrap">
+                                                회사는 고객문의에 대해 정확하고 빠른 대응을 위해 아래와 같이 개인정보를 수집하고 있습니다.<br>
+                                                <br>
+                                                &lt;수집하는 개인정보의 항목&gt;<br>
+                                                -이름, 휴대전화, 이메일, 비밀번호<br>
+                                                <br>
+                                                &lt;개인정보의 수집 및 이용목적&gt;<br>
+                                                - 문의사항의 접수 및 답변의 전달<br>
+                                                - 원활한 의사소통 경로의 확보<br>
+                                                - 고객불만 등에 대한 대응<br>
+                                                <br>
+                                                &lt;보유 및 이용기간&gt;<br>
+                                                - 보유근거 : 전자상거래 등에서의 소비자보호에 관한 법률<br>
+                                                - 보유기간 : 3년 (소비자의 불만 또는 분쟁처리에 관한 기록)<br>
+                                                <br>
+                                                * 문의에 대한 처리과정에서 회사(매장 또는 고객대응팀)는 고객님께 연락드릴 수 있습니다.<br>
+                                                * 문의하기 서비스 이용에 필요한 최소한의 개인정보 수집·이용에 동의하지 않을 권리가 있으나 동의 거부 시 신속한 문제해결이
+                                                제한될 수
+                                                있습니다.<br>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <div class="privacy_chk">
+                                        <div>
+                                            <div class="chk-box">
+                                                <input type="radio" id="agree_yes" name="agree">
+                                                <label for="agree_yes" class="checkbox"></label>
+                                                <label for="agree_yes">동의함</label>
+                                            </div>
+                                            <div class="chk-box">
+                                                <input type="radio" id="agree_no" name="agree">
+                                                <label for="agree_no" class="checkbox"></label>
+                                                <label for="agree_no">동의하지 않음</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tap"></div>
+                        </div>
+
+                        <div class="acc_online_contents"></div>
+                    </form>
+            </article>
+        </section>
+    </main>
+    <footer class="w100">
+        <div class="w1200 f_top">
+            <div>
+                <div class="footer_order">
+                    <h1><a class="common_img" href=""></a></h1>
+                    <div class="tell">1577-3082</div>
+                </div>
+                <ul>
+                    <li><a href="">이용약관</a></li>
+                    <li><a class="strong" href="">개인정보 처리방침</a></li>
+                    <li><a class="strong" href="">위치기반 서비스</a></li>
+                    <li><a href="">청소년 보호방침</a></li>
+                    <li><a href="">영상정보처리기기 운영관리방침</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">진재채용</a></li>
+                    <li><a href="">가맹점모집</a></li>
+                    <li><a href="">단체주문</a></li>
+                </ul>
+                <div class="footer_info">
+                    <p>06223 서울특별시 강남구 역삼로25길 35(역삼동, 청오큐브타워) 청오디피케이㈜｜대표이사 : 오광현,김영훈 <br />
+                        사업자 등록번호: 220-81-03371｜통신판매업신고: 강남 5064호｜개인정보 보호책임자 : 윤여진｜민원 책임자 : 임영길<br />
+                        문의 : webmaster@dominos.co.kr <br />
+                        Copyright ⓒ Domino’s Pizza. All rights reserved.<br /></p>
+                    <br>
+                    <p>청오디피케이㈜의 사전 서면동의 없이 도미노피자 사이트(PC, 모바일, 앱)의 일체의 정보, 콘텐츠 및 UI 등을 상업적 목적으로 전재, 전송, 스크래핑 등 무단 사용할 수
+                        없습니다. <br />
+                        도미노피자에서 판매되는 모든 상품은 청오디피케이㈜에서 책임지고 있습니다.</p>
+                </div>
+            </div>
+            <div class="footer_cont">
+                <div>
+                    <div class="langu">kor</div>
+                    <div class="down">
+                        <p>DOWNLOAD WEP</p>
+                        <ul>
+                            <li><a class="common_img apple" href=""></a></li>
+                            <li><a class="common_img android" href=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul>
+                    <li><a class="common_img bl" href=""></a></li>
+                    <li><a class="common_img in" href=""></a></li>
+                    <li><a class="common_img fb" href=""></a></li>
+                    <li><a class="common_img yt" href=""></a></li>
+                    <li><a class="common_img tw" href=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w100 f_bot">
+            <ul>
+                <li><img class="f1" src="img/f1.png" alt="">
+                    <p>식품안정<br />경영시스템 인증</p>
+                </li>
+                <li><img class="f2" src="img/f2.png" alt="">
+                    <p>지식경제부<br />우수디자인 선정</p>
+                </li>
+                <li><img class="f3" src="img/f3.png" alt="">
+                    <p>2022년 고객이 가장 추천하는 기업<br />피자전문점 부문 10년 연속 1위</p>
+                </li>
+                <li><img class="f4" src="img/f4.png" alt="">
+                    <p>2023년 한국산업 고객만족도<br>피자전문점 부문 9년 연속 1위</p>
+                </li>
+                <li><img class="f5" src="img/f5.png" alt="">
+                    <p>2023 프리미엄브랜드지수<br />피자전문점 부문 8년 연속 1위 수상</p>
+                </li>
+                <li><img class="f6" src="img/f6.png" alt="">
+                    <p>대학생 1000명이 선택한<br>2019 올해의 핫 브랜드 캠퍼스 잡앤조이 선정</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
